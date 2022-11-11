@@ -51,6 +51,56 @@ def valida_questao(questao):
             dicio['correta'] = 'valor_errado'
     return dicio
 ex = []
+
+def valida_questao(questao):
+    # chaves = []
+    dicio = {}
+    chaves = (questao.keys())
+    chaves = len(chaves)
+    if 'titulo' not in questao.keys():
+            dicio['titulo'] = 'nao_encontrado'
+    if 'nivel' not in questao.keys():
+            dicio['nivel'] = 'nao_encontrado'
+    if 'opcoes' not in questao.keys():
+            dicio['opcoes'] = 'nao_encontrado'
+    if 'correta' not in questao.keys():
+            dicio['correta'] = 'nao_encontrado'
+    if chaves != 4:
+        dicio['outro'] = 'numero_chaves_invalido'
+    # Trabalha "Título"
+    if 'titulo' in questao:
+        if len(questao['titulo'].strip()) == 0:
+            dicio['titulo'] = 'vazio'
+    #trabalha 'nivel'
+    if 'nivel'in questao:
+        if questao['nivel'] != 'facil' and questao['nivel'] != 'medio' and questao['nivel'] != 'dificil':
+            dicio['nivel'] = 'valor_errado'
+    # Trabalha 'opcoes'
+    if 'opcoes' in questao:
+        if len(questao['opcoes']) != 4:
+                dicio['opcoes'] = 'tamanho_invalido'
+        elif 'A' not in questao['opcoes'] and 'B' not in questao['opcoes'] and 'C' not in questao['opcoes'] and 'D' not in questao['opcoes']:
+                dicio['opcoes'] = 'chave_invalida_ou_nao_encontrada'
+        elif 'A' in questao['opcoes'].keys() and 'B' in questao['opcoes'].keys() and 'C' in questao['opcoes'].keys() and 'D' in questao['opcoes'].keys():
+            for letra, texto in questao['opcoes'].items():
+                if texto.strip() == '':
+                    if 'opcoes'not in dicio:
+                        dicio['opcoes'] ={}
+                    dicio['opcoes'][letra] = 'vazia'
+    # Trabalha "correta"
+    if 'correta' in questao:
+        if questao['correta'] != 'A'and questao['correta'] != 'B' and questao['correta'] != 'C' and questao['correta'] != 'D':
+            dicio['correta'] = 'valor_errado'
+    return dicio
+
+def valida_questoes(lista):
+    erros = []
+    for questao in lista:
+        valida = valida_questao(questao)
+        erros.append(valida)
+    return erros
+        
+    
 def sorteia_questao(questoes, nivel):
     for dif in questoes.keys():
         if dif == nivel:
@@ -103,3 +153,4 @@ def gera_ajuda(questao):
             i += 1
     traco = " | ".join(dica)
     return f"DICA:\nOpções certamente erradas: {traco}"
+
