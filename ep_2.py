@@ -1,3 +1,4 @@
+import random
 def transforma_base(lista):
     dici = {}
     if len(lista) == 0:
@@ -48,3 +49,21 @@ def valida_questao(questao):
         if questao['correta'] != 'A'and questao['correta'] != 'B' and questao['correta'] != 'C' and questao['correta'] != 'D':
             dicio['correta'] = 'valor_errado'
     return dicio
+
+ex = []
+def sorteia_questao(questoes, nivel):
+    for dif in questoes.keys():
+        if dif == nivel:
+            ex = questoes[dif]
+    tam = len(ex)
+
+        
+    sorteio = random.randint(0,tam-1)
+    return(ex[sorteio])
+
+def sorteia_questao_inedita(questoes, nivel, lista):
+    questao_sorteada = sorteia_questao(questoes, nivel)
+    while questao_sorteada in lista:
+        questao_sorteada = sorteia_questao(questoes, nivel)
+    lista.append(questao_sorteada)
+    return questao_sorteada
