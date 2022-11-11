@@ -154,3 +154,4 @@ def gera_ajuda(questao):
     traco = " | ".join(dica)
     return f"DICA:\nOpções certamente erradas: {traco}"
 
+print ('Bora')
