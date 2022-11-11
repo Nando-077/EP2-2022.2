@@ -87,3 +87,19 @@ def questao_para_texto(questao, num):
     pergunta = '----------------------------------------\nQUESTAO {0}\n\n{1}\n\nRESPOSTAS:\nA: {2}\nB: {3}\nC: {4}\nD: {5}'.format(num,ti,a,b,c,d)
 
     return pergunta
+
+def gera_ajuda(questao):
+    i = 1
+    maximo = 3
+    dica = []
+    opcoes = [ "A", "B", "C", "D"]
+    opcoes.remove(questao["correta"])
+    num_dicas = random.randint(1,2)
+    sorteio = random.randint(1,maximo-1)
+    while num_dicas >= i:
+        sorteio = random.randint(0,maximo-1)
+        if questao["opcoes"][opcoes[sorteio]] not in dica:
+            dica.append(questao["opcoes"][opcoes[sorteio]])
+            i += 1
+    traco = " | ".join(dica)
+    return f"DICA:\nOpções certamente erradas: {traco}"
