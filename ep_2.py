@@ -67,3 +67,23 @@ def sorteia_questao_inedita(questoes, nivel, lista):
         questao_sorteada = sorteia_questao(questoes, nivel)
     lista.append(questao_sorteada)
     return questao_sorteada
+
+def questao_para_texto(questao, num):
+    for j, i in questao.items():
+        if j == 'titulo':
+            ti = i 
+        elif j == 'opcoes':
+            for op, resp in questao['opcoes'].items():
+                if op == 'A':
+                    a = resp
+                elif op == 'B':
+                    b = resp
+                elif op == 'C':
+                    c = resp
+                elif op == 'D':
+                    d = resp
+
+
+    pergunta = '----------------------------------------\nQUESTAO {0}\n\n{1}\n\nRESPOSTAS:\nA: {2}\nB: {3}\nC: {4}\nD: {5}'.format(num,ti,a,b,c,d)
+
+    return pergunta
