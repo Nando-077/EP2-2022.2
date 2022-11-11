@@ -48,3 +48,22 @@ def valida_questao(questao):
         if questao['correta'] != 'A'and questao['correta'] != 'B' and questao['correta'] != 'C' and questao['correta'] != 'D':
             dicio['correta'] = 'valor_errado'
     return dicio
+def questao_para_texto(questao, num):
+    for j, i in questao.items():
+        if j == 'titulo':
+            ti = i 
+        elif j == 'opcoes':
+            for op, resp in questao['opcoes'].items():
+                if op == 'A':
+                    a = resp
+                elif op == 'B':
+                    b = resp
+                elif op == 'C':
+                    c = resp
+                elif op == 'D':
+                    d = resp
+
+
+    pergunta = '----------------------------------------\nQUESTAO {0}\n\n{1}\n\nRESPOSTAS:\nA: {2}\nB: {3}\nC: {4}\nD: {5}'.format(num,ti,a,b,c,d)
+
+    return pergunta
