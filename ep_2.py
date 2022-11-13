@@ -314,12 +314,7 @@ quest = [ {'titulo': 'Qual o resultado da operação 57 + 32?',
           'opcoes': {'A': 'Uma banda de Rock', 'B': 'Uma marca de luxo', 'C': 'Cidade Francesa', 'D': 'Morte de tecido orgânico'},
           'correta': 'D'} ]
     
-quest_extra = [ {'titulo': 'Considere que os ângulos internos de um triângulo formam uma progressão aritmética. Dado que a,b,c são as medidas dos lados do triângulo, sendo a < b, é correto afirmar que:'
-'nivel': 'dificil'
-'opcoes': {'A': 'b^2 + ac = a^2 + c^2 ','B': 'a^2 + bc = b^2 + c^2 ', 'C': 'a^2 – bc = b^2 + c^2', 'D': 'b^2 – ac = a^2 + c^2' }
-'correta': 'A' }
-
-]
+#quest_extra = [{'titulo': 'Considere que os ângulos internos de um triângulo formam uma progressão aritmética. Dado que a,b,c são as medidas dos lados do triângulo, sendo a < b, é correto afirmar que:''nivel': 'dificil''opcoes': {'A': 'b^2 + ac = a^2 + c^2 ','B': 'a^2 + bc = b^2 + c^2 ', 'C': 'a^2 – bc = b^2 + c^2', 'D': 'b^2 – ac = a^2 + c^2' }'correta': 'A' }]
 pular = 3
 ajuda = 2
 
@@ -330,7 +325,8 @@ nome = input('\n Qual o seu nome?')
 print ('\n OK {0}, você tem direito a pular {1} vezes e {2} ajudas! \n As opçoes de resposta são "A","B","C","D","ajuda","pula" e "parar" !'.format(nome,pular,ajuda))
 enter = input('\n Aperte ENTER para começar...')
 print ('\n O jogo ja vai começar!, la vem a primeira pergunta!')
-print ('\n Vamos começar com uma questão de nivel {0}'.format (nivel))
+print ('\n Vamos começar com uma questão de nivel {0}'.format ('facil'))
 enter = input('Aperte ENTER para começar...')
-
+dic = transforma_base(quest)
+erro = valida_questoes(quest)
 
