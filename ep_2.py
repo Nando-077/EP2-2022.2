@@ -330,5 +330,7 @@ nome = input('\n Qual o seu nome?')
 print ('\n OK {0}, você tem direito a pular {1} vezes e {2} ajudas! \n As opçoes de resposta são "A","B","C","D","ajuda","pula" e "parar" !'.format(nome,pular,ajuda))
 enter = input('\n Aperte ENTER para começar...')
 print ('\n O jogo ja vai começar!, la vem a primeira pergunta!')
+print ('\n Vamos começar com uma questão de nivel {0}'.format (nivel))
+enter = input('Aperte ENTER para começar...')
 
 
