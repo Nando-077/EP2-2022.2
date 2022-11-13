@@ -314,5 +314,12 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
           'opcoes': {'A': 'Uma banda de Rock', 'B': 'Uma marca de luxo', 'C': 'Cidade Francesa', 'D': 'Morte de tecido orgânico'},
           'correta': 'D'}
         ] 
+pular = 3
+ajuda = 2
 
-introducao = input('Olá! Você está na Fortuna DesSoft e terá a oportunidade de enriquecer!')
+
+#introducao = input('Olá! Você está na Fortuna DesSoft e terá a oportunidade de enriquecer!')
+print ('Olá! Você está na Fortuna DesSoft e terá a oportunidade de enriquecer!')
+nome = input('Qual o seu nome?')
+print ('OK {0}, você tem direito a pular {1} vezes e {2} ajudas! \n As opçoes de resposta são "A","B","C","D","ajuda","pula" e "parar" !'.format(nome,pular,ajuda))
+
