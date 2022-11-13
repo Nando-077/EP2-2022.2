@@ -317,10 +317,9 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
          {'titulo': 'Considere que os ângulos internos de um triângulo formam uma progressão aritmética. Dado que a,b,c são as medidas dos lados do triângulo, sendo a < b, é correto afirmar que:',
          'nivel': 'dificil',
          'opcoes': {'A': 'b^2 + ac = a^2 + c^2 ','B': 'a^2 + bc = b^2 + c^2 ', 'C': 'a^2 – bc = b^2 + c^2', 'D': 'b^2 – ac = a^2 + c^2' },
-         'correta': 'A'}
-
+         'correta': 'A'} 
         
-] 
+         ] 
 pular = 3
 ajuda = 2
 
