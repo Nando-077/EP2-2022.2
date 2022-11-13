@@ -320,7 +320,7 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
          'correta': 'A'}
 
         
-        ] 
+] 
 pular = 3
 ajuda = 2
 
