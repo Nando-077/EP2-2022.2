@@ -154,7 +154,7 @@ def gera_ajuda(questao):
     traco = " | ".join(dica)
     return f"DICA:\nOpções certamente erradas: {traco}"
 
-quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
+quest = [ {'titulo': 'Qual o resultado da operação 57 + 32?',
           'nivel': 'facil',
           'opcoes': {'A': '-19', 'B': '85', 'C': '89', 'D': '99'},
           'correta': 'C'},
@@ -312,14 +312,9 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
          {'titulo': 'O que é Necrose?',
           'nivel': 'dificil',
           'opcoes': {'A': 'Uma banda de Rock', 'B': 'Uma marca de luxo', 'C': 'Cidade Francesa', 'D': 'Morte de tecido orgânico'},
-          'correta': 'D'}
-
-         {'titulo': 'Considere que os ângulos internos de um triângulo formam uma progressão aritmética. Dado que a,b,c são as medidas dos lados do triângulo, sendo a < b, é correto afirmar que:',
-         'nivel': 'dificil',
-         'opcoes': {'A': 'b^2 + ac = a^2 + c^2 ','B': 'a^2 + bc = b^2 + c^2 ', 'C': 'a^2 – bc = b^2 + c^2', 'D': 'b^2 – ac = a^2 + c^2' },
-         'correta': 'A'} 
-        
-         ] 
+          'correta': 'D'} ]
+    
+quest_extra = []
 pular = 3
 ajuda = 2
 
